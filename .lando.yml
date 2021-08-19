@@ -1,0 +1,38 @@
+name: drupal-bootcamp
+excludes:
+  - vendor
+recipe: drupal9
+config:
+  php: '7.4'
+  composer_version: '1.10.22'
+  via: apache
+  webroot: docroot
+  database: mysql:5.7
+  drush: false
+  xdebug: false
+  config:
+    database: drupal9
+services:
+  appserver:
+    scanner: false
+    build:
+      - composer install
+  database:
+    type: mysql:5.7
+    portforward: true
+tooling:
+  blt:
+    service: appserver
+    description: Run BLT commands
+    cmd: blt
+  drush:
+    service: appserver
+    description: Run Drush commands
+    cmd: drush
+  drupal:
+    service: appserver
+    description: Run Drupal commands
+    cmd: drupal
+proxy:
+  appserver:
+    - local.drupal-bootcamp.com
