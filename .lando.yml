@@ -29,6 +29,8 @@ tooling:
     service: appserver
     description: Run Drush commands
     cmd: drush
+    env:
+      DRUSH_OPTIONS_URI: "http://local.drupal-bootcamp.com"
   drupal:
     service: appserver
     description: Run Drupal commands
