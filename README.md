@@ -20,3 +20,35 @@ After install Lando follow these steps:
 ```sh
 > lando start
 ```
+
+You have at your disposal drush to run some commands for Drupal. To run any drush command with this setup you need to:
+```sh
+> lando drush <command>
+```
+
+Here are some lando commands that are useful to you daily:
+
+Start Lando
+```sh
+> lando start
+```
+
+Stop Lando
+```sh
+> lando stop
+```
+
+Restart Lando:
+```sh
+> lando restart
+```
+
+Rebuild Lando (refresh some lando configs, if needed):
+```sh
+> lando rebuild
+```
+
+Destroy Lando (use carefully, because you will loose your database information):
+```sh
+> lando destroy
+```
