@@ -56,4 +56,9 @@ Destroy Lando (use carefully, because you will loose your database information):
 ### Drupal Setup configuration
 
 Information you will need to use with your first Drupal setup for database
-...
+```
+database: drupal9
+username: drupal9
+password: drupal9
+host: database (doesn't use localhost)
+```
