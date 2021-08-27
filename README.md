@@ -36,7 +36,7 @@ Information you will need to use with your first Drupal setup for database
 database: drupal9
 username: drupal9
 password: drupal9
-host: database (doesn't use localhost)
+host: database (don't use localhost)
 ```
 
 ### Aditional information
