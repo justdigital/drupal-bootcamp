@@ -52,3 +52,8 @@ Destroy Lando (use carefully, because you will loose your database information):
 ```sh
 > lando destroy
 ```
+
+### Drupal Setup configuration
+
+Information you will need to use with your first Drupal setup for database
+...
