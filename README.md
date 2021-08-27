@@ -21,12 +21,36 @@ After install Lando follow these steps:
 > lando start
 ```
 
+- Access your local Drupal and follow the installation process
+http://local.drupal-bootcamp.com/
+
+If your browser can't open this address, you can try to add this to your hosts, using this command:
+```ssh
+sudo bash -c 'echo "127.0.0.1 local.drupal-bootcamp.com" >> /etc/hosts'
+```
+
+### Drupal Setup configuration
+
+Information you will need to use with your first Drupal setup for database
+```
+database: drupal9
+username: drupal9
+password: drupal9
+host: database (doesn't use localhost)
+```
+
+### Aditional information
 You have at your disposal drush to run some commands for Drupal. To run any drush command with this setup you need to:
 ```sh
 > lando drush <command>
 ```
 
-Here are some lando commands that are useful to you daily:
+If you need to access the admin area of Drupal, but doesn't remember your password, you can generate a unique login link using drush:
+```sh
+> lando drush uli
+```
+
+#### Here are some lando commands that are useful to you daily:
 
 Start Lando
 ```sh
@@ -53,12 +77,3 @@ Destroy Lando (use carefully, because you will loose your database information):
 > lando destroy
 ```
 
-### Drupal Setup configuration
-
-Information you will need to use with your first Drupal setup for database
-```
-database: drupal9
-username: drupal9
-password: drupal9
-host: database (doesn't use localhost)
-```
